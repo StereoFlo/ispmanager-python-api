@@ -1,4 +1,5 @@
 import requests
+import json
 
 
 class IspManager:
@@ -35,9 +36,7 @@ class IspManager:
             req = requests.post(self.url, self.urlParts)
         else:
             req = requests.get(self.url, self.urlParts)
-
-        print(req.content)
-        return self
+        return json.loads(req.content)
 
     def build_url(self):
         self.url = self.server.scheme + '://' + self.server.host
