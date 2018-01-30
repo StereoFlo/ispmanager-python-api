@@ -1,4 +1,4 @@
-class User:
+class Credentials:
     def __init__(self, login, password):
         self.login = login
         self.password = password
@@ -9,4 +9,8 @@ class User:
 
     def set_login(self, login):
         self.login = login
+        return self
+
+    def set_password(self, password):
+        self.password = password
         return self

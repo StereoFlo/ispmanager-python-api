@@ -10,7 +10,7 @@ sorry english version is not ready yet
 
 ```python
 
-from isp_manager.user import User
+from isp_manager.credentials import Credentials
 from isp_manager.server import Server
 from isp_manager.isp_manager import IspManager
 from isp_manager.func.Domain import add
@@ -21,7 +21,7 @@ from isp_manager.func.Domain import add
 
 ```python
 
-user = User('user', 'password')
+user = Credentials('user', 'password')
 server = Server('delta.hoster.net')
 ```
 
