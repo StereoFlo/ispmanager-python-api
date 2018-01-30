@@ -1,5 +1,5 @@
-import urllib
 import requests
+
 
 class IspManager:
 
@@ -12,7 +12,6 @@ class IspManager:
     func = ''
     url = ''
     urlParts = {}
-    data = {}
 
     def set_server(self, server):
         self.server = server
@@ -28,10 +27,6 @@ class IspManager:
 
     def set_func(self, func):
         self.func = func
-        return self
-
-    def set_data(self, data):
-        self.data = data
         return self
 
     def execute(self):
@@ -50,6 +45,7 @@ class IspManager:
         self.prepare_url_user()
         self.prepare_url_format()
         self.prepare_url_func()
+        self.prepare_additional()
         return self
 
     def prepare_url_port(self):
@@ -73,4 +69,9 @@ class IspManager:
             self.urlParts['elid'] = self.func.get_elid()
         if self.func.get_plid():
             self.urlParts['elid'] = self.func.get_plid()
+        return self
+
+    def prepare_additional(self):
+        if self.func.additional:
+            self.urlParts.update(self.func.additional)
         return self

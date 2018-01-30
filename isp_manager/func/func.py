@@ -8,7 +8,7 @@ class Func:
 
         pass
 
-    isSaveAction = ''
+    isSaveAction = False
 
     funcName = ''
 
@@ -16,7 +16,7 @@ class Func:
 
     plid = ''
 
-    additional = []
+    additional = {}
 
     def set_additional(self, additional):
         self.additional = additional
