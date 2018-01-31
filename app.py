@@ -1,7 +1,7 @@
 from isp_manager.user import User
 from isp_manager.server import Server
 from isp_manager.isp_manager import IspManager
-from isp_manager.func.Domain import add
+from isp_manager.func.domain import add
 
 user = User('user', 'password')
 server = Server('delta.hoster.net')
