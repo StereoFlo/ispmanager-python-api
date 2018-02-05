@@ -1,7 +1,7 @@
-from isp_manager.func import func
+from isp_manager.func import Func
 
 
-class List(func.Func):
+class Delete(Func):
     def __init__(self, elid='', plid=''):
         if len(elid) != 0:
             self.elid = elid
@@ -9,7 +9,7 @@ class List(func.Func):
         if len(plid) != 0:
             self.plid = plid
 
-        func.Func.__init__(self, elid, plid)
+        Func.__init__(self, elid, plid)
         pass
 
     funcName = 'domain.delete'

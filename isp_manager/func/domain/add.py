@@ -1,7 +1,7 @@
-from isp_manager.func import func
+from isp_manager.func import Func
 
 
-class Add(func.Func):
+class Add(Func):
     def __init__(self, elid='', plid=''):
         if len(elid) != 0:
             self.elid = elid
@@ -11,8 +11,7 @@ class Add(func.Func):
 
         self.funcName = 'domain.edit'
         self.isSaveAction = True
-        func.Func.__init__(self, elid, plid)
-        pass
+        Func.__init__(self, elid, plid)
 
     def set_additional(self, additional):
         if 'ns' in additional:

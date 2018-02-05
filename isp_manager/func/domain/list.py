@@ -1,7 +1,7 @@
-from isp_manager.func import func
+from isp_manager.func import Func
 
 
-class List(func.Func):
+class List(Func):
     def __init__(self, elid='', plid=''):
         if len(elid) != 0:
             self.elid = elid
@@ -10,5 +10,5 @@ class List(func.Func):
             self.plid = plid
 
         self.funcName = 'domain'
-        func.Func.__init__(self, elid, plid)
+        Func.__init__(self, elid, plid)
         pass
