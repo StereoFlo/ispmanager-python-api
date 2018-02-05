@@ -1,4 +1,7 @@
-class Func:
+from func_interface import FuncInterface
+
+
+class Func(FuncInterface):
     def __init__(self, elid='', plid=''):
         if len(elid) != 0:
             self.elid = elid
