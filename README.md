@@ -2,7 +2,7 @@
 
 sorry, english version is not ready yet
 
-Реализация клиента к API панели ISPManager на языке Python. PHP версию вы можете найти тут https://github.com/StereoFlo/ispmanager-php-api. Суть работы, та же, вы добавляете в isp_manager/func/Domain/ свою функцию и работаете с ней
+Реализация клиента к API панели ISPManager на языке Python. PHP версию вы можете найти тут https://github.com/StereoFlo/ispmanager-php-api. Суть работы, та же, вы добавляете в isp_manager/func/domain/ свою функцию и работаете с ней
 
 ##### Пример вызова приведен в файле app.py:
 
