@@ -1,10 +1,10 @@
 # ISPManager Python API
 
-sorry english version is not ready yet
+sorry, english version is not ready yet
 
 Реализация клиента к API панели ISPManager на языке Python. PHP версию вы можете найти тут https://github.com/StereoFlo/ispmanager-php-api. Суть работы, та же, вы добавляете в isp_manager/func/Domain/ свою функцию и работаете с ней
 
-##### Пример вызова приведен тут app.py:
+##### Пример вызова приведен в файле app.py:
 
 Необходимые импорты
 
@@ -12,8 +12,9 @@ sorry english version is not ready yet
 
 from isp_manager.credentials import Credentials
 from isp_manager.server import Server
-from isp_manager.isp_manager import IspManager
-from isp_manager.func.Domain import add
+from isp_manager import IspManager
+from isp_manager.func.domain import Add
+
 
 ```
 
@@ -25,11 +26,11 @@ user = Credentials('user', 'password')
 server = Server('delta.hoster.net')
 ```
 
-Создаюм объект функции (в данном случае - добавление домена)
+Создаюм объект функции (в данном случае функция это добавление домена)
 
 ```python
 
-func = add.Add()
+func = Add()
 func.set_additional({
     'name': 'domain.ru',
     'ip': '127.0.0.1',

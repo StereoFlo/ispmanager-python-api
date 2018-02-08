@@ -1,11 +1,11 @@
-from isp_manager.user import User
+from isp_manager.credentials import Credentials
 from isp_manager.server import Server
-from isp_manager.isp_manager import IspManager
-from isp_manager.func.domain import add
+from isp_manager import IspManager
+from isp_manager.func.domain import Add
 
-user = User('user', 'password')
+user = Credentials('user', 'password')
 server = Server('delta.hoster.net')
-func = add.Add()
+func = Add()
 func.set_additional({
     'name': 'domain.ru',
     'ip': '127.0.0.1',
